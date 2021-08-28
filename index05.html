@@ -118,6 +118,11 @@
                   <div class="swiper-slide ss2">Slide 2</div>
                   <div class="swiper-slide ss3">Slide 3</div>
               </div>
+               <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+               <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>
@@ -130,7 +135,21 @@
     <script src="assets/js/ie-checker.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper-container');
+        const swiper = new Swiper('.swiper-container', {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+          },
+          autoplay: {
+           delay: 5000,
+          },
+
+        });
     </script>
 
 
